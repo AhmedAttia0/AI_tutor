@@ -5,7 +5,8 @@ import {
   NavbarLink,
   NavbarToggle,
 } from "flowbite-react";
-import logo from "../../assets/image.png";
+import logo from "../../assets/image0.png";
+
 const NavbarLogin = () => {
   return (
     <div className="">
