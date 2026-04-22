@@ -2,7 +2,7 @@ import Navbar from "../components/layout/Navbar";
 import Hero from "../components/sections/Hero";
 import LearningModes from "../components/sections/LearningModes";
 import DashboardGrid from "../components/sections/DashboardGrid";
-import Features from "../components/sections/Features";
+
 import Footer from "../components/sections/Footer";
 
 const Home = () => {
@@ -12,7 +12,6 @@ const Home = () => {
       <Hero />
       <LearningModes />
       <DashboardGrid />
-      <Features />
       <Footer />
     </div>
   );

@@ -13,7 +13,9 @@ import {
   FaAtom,
   FaFlask,
   FaCode,
+  FaShieldAlt,
 } from "react-icons/fa";
+import { FiCalendar, FiBookOpen, FiTrendingUp } from "react-icons/fi";
 import { IoIosCalculator } from "react-icons/io";
 
 const DashboardGrid = () => {
@@ -67,7 +69,7 @@ const DashboardGrid = () => {
       status: "88%",
     },
     {
-      icon: FaCheckCircle,
+      icon: FaShieldAlt,
       title: "Quality Control",
       description:
         "Every explanation is validated for accuracy and comprehensiveness",
@@ -188,31 +190,38 @@ const DashboardGrid = () => {
             </div>
 
             {/* AI-Powered Features */}
-            <div>
-              <h3 className="mb-6 text-xl font-bold text-slate-900">
+            <div className="rounded-3xl border border-slate-200 bg-slate-100/80 p-8">
+              <h3 className="mb-8 text-2xl font-bold text-slate-800">
                 AI-Powered Features
               </h3>
-              <div className="grid gap-4 sm:grid-cols-2">
+
+              <div className="grid gap-6 sm:grid-cols-2">
                 {features.map((feature, idx) => (
                   <div
                     key={idx}
-                    className="rounded-2xl bg-white p-6 shadow-sm border border-slate-100 transition-all hover:shadow-md"
+                    className="rounded-2xl border border-blue-100 bg-slate-50/80 p-6 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5"
                   >
+                    {/* header */}
                     <div className="mb-4 flex items-start justify-between">
                       <div
-                        className={`rounded-lg ${iconPadding} flex items-center justify-center`}
+                        className={`rounded-xl ${iconPadding} flex items-center justify-center`}
                         style={{ backgroundColor: iconBgColor }}
                       >
                         <feature.icon className="h-6 w-6 text-white" />
                       </div>
-                      <span className="rounded-full bg-green-100 px-2 py-1 text-xs font-semibold text-green-700">
+
+                      <span className="rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-600">
                         {feature.status}
                       </span>
                     </div>
-                    <h4 className="font-bold text-slate-900">
+
+                    {/* title */}
+                    <h4 className="text-lg font-semibold text-slate-800">
                       {feature.title}
                     </h4>
-                    <p className="mt-2 text-sm text-slate-600">
+
+                    {/* description */}
+                    <p className="mt-2 text-sm leading-relaxed text-slate-600">
                       {feature.description}
                     </p>
                   </div>
@@ -272,7 +281,7 @@ const DashboardGrid = () => {
             </div>
 
             {/* AI Tutor Status */}
-            <div className="rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 p-6 text-white shadow-lg">
+            <div className="rounded-2xl bg-[linear-gradient(135deg,#1E3A8A_0%,#3B82F6_70.71%)] p-6 text-white shadow-lg">
               <div className="mb-4 flex items-center gap-2">
                 <div
                   className={`rounded-lg ${iconPadding} flex items-center justify-center`}
@@ -295,30 +304,27 @@ const DashboardGrid = () => {
             </div>
 
             {/* Quick Actions */}
-            <div className="rounded-2xl bg-white p-6 shadow-sm border border-slate-100">
-              <h3 className="mb-4 text-lg font-bold text-slate-900">
-                Quick Actions
-              </h3>
-              <div className="space-y-3">
-                <button className="flex w-full items-center justify-between rounded-lg bg-blue-50  transition-all hover:bg-blue-100">
-                  <span className="font-medium text-slate-900">
-                    Schedule Session
-                  </span>
-                  <span className="text-blue-600">📅</span>
-                </button>
-                <button className="flex w-full items-center justify-between rounded-lg bg-purple-50  transition-all hover:bg-purple-100">
-                  <span className="font-medium text-slate-900">
-                    Browse Resources
-                  </span>
-                  <span className="text-purple-600">📚</span>
-                </button>
-                <button className="flex w-full items-center justify-between rounded-lg bg-green-50  transition-all hover:bg-green-100">
-                  <span className="font-medium text-slate-900">
-                    View Analytics
-                  </span>
-                  <span className="text-green-600">📊</span>
-                </button>
-              </div>
+            <div className="space-y-4">
+              <button className="flex w-full items-center justify-between rounded-xl bg-slate-200/70 px-5 py-4 text-left transition-all duration-300 hover:bg-slate-200 hover:-translate-y-0.5">
+                <span className="font-semibold text-blue-900">
+                  Schedule Session
+                </span>
+                <FiCalendar className="text-blue-500 text-xl" />
+              </button>
+
+              <button className="flex w-full items-center justify-between rounded-xl bg-slate-200/70 px-5 py-4 text-left transition-all duration-300 hover:bg-slate-200 hover:-translate-y-0.5">
+                <span className="font-semibold text-blue-900">
+                  Browse Resources
+                </span>
+                <FiBookOpen className="text-blue-500 text-xl" />
+              </button>
+
+              <button className="flex w-full items-center justify-between rounded-xl bg-slate-200/70 px-5 py-4 text-left transition-all duration-300 hover:bg-slate-200 hover:-translate-y-0.5">
+                <span className="font-semibold text-blue-900">
+                  View Analytics
+                </span>
+                <FiTrendingUp className="text-blue-500 text-xl" />
+              </button>
             </div>
           </div>
         </div>
