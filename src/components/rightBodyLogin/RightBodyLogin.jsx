@@ -44,10 +44,10 @@ const RightBodyLogin = () => {
   };
   return (
     <div className="w-full min-w-full">
-      <Card className="">
+      <Card className="bg-white ">
         <div>
           <h1 className="font-bold text-[#1E3A8A] text-2xl">Welcome Back</h1>
-          <p className="font-normal text-base">
+          <p className="font-normal text-bas">
             Sign in to continue your learning journey with CogniBot
           </p>
         </div>
