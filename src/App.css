@@ -1,0 +1,23 @@
+.navbar-link {
+  color: rgba(75, 85, 99, 1);
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 150ms ease-in-out;
+}
+
+.navbar-link:hover,
+.navbar-link:focus-visible {
+  color: rgba(30, 58, 138, 1);
+}
+
+.navbar-link.block {
+  width: 100%;
+}
