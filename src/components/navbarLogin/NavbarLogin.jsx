@@ -9,8 +9,8 @@ import logo from "../../assets/image0.png";
 
 const NavbarLogin = () => {
   return (
-    <div className="">
-      <Navbar fluid={false} className="bg-[#FFFFFF1A]">
+    <div className=" ">
+      <Navbar fluid={false} className="bg-[#FFFFFF1A] ">
         <NavbarBrand href="#">
           <img
             src={logo}
