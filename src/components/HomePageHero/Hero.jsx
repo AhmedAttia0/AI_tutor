@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
 import VideoCameraIcon from "../../assets/HomePageIcons/VideoCamera.png";
 import ClockIcon from "../../assets/HomePageIcons/Clock.png";
 import GroupIcon from "../../assets/HomePageIcons/GroupOfPeople.png";
 import StarIcon from "../../assets/HomePageIcons/Star.png";
+import StudentIcon from "../../assets/HomePageIcons/student.png";
 
 const Hero = () => {
   return (
@@ -39,14 +41,20 @@ const Hero = () => {
 
             {/* buttons */}
             <div className="flex flex-col gap-4 sm:flex-row">
-              <button className="flex items-center justify-center gap-3 rounded-xl bg-white px-8 py-4 font-semibold text-blue-900 shadow-xl transition hover:bg-blue-50">
+              <Link
+                to="/login"
+                className="flex items-center justify-center gap-3 rounded-xl bg-white px-8 py-4 font-semibold text-blue-900 shadow-xl transition hover:bg-blue-50"
+              >
                 <img src={VideoCameraIcon} className="h-6" />
                 Start Live AI Tutor Session →
-              </button>
+              </Link>
 
-              <button className="rounded-xl border border-white/30 bg-white/10 px-8 py-4 font-semibold backdrop-blur-md transition hover:bg-white/20">
+              <Link
+                to="/analytics"
+                className="rounded-xl border border-white/30 bg-white/10 px-8 py-4 font-semibold backdrop-blur-md transition hover:bg-white/20"
+              >
                 Watch Demo
-              </button>
+              </Link>
             </div>
 
             {/* stats */}
@@ -77,17 +85,14 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* RIGHT GLASS CARD */}
-          <div className="flex justify-center lg:justify-end">
-            <div className="relative">
-              <div className="absolute inset-0 rounded-3xl bg-white/10 blur-xl"></div>
-
-              <div className="relative h-[420px] w-[420px] rounded-3xl border border-white/20 bg-white/10 backdrop-blur-md">
-                <div className="flex h-full items-center justify-center text-white/40">
-                  Illustration
-                </div>
-              </div>
-            </div>
+          {/* RIGHT — Student mascot */}
+          <div className="flex items-center justify-center lg:justify-end">
+            <img
+              src={StudentIcon}
+              alt="Cognixel AI mascot"
+              className="w-[420px] lg:w-[500px] drop-shadow-2xl select-none"
+              draggable={false}
+            />
           </div>
         </div>
       </div>
