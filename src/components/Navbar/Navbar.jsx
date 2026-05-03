@@ -1,5 +1,6 @@
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
+import { FaUserCircle } from "react-icons/fa";
 import ImageDiv from "../../assets/image.png";
 
 const Navbar = () => {
@@ -8,14 +9,14 @@ const Navbar = () => {
   return (
     <nav className="bg-white border-b border-slate-200 shadow-sm sticky top-0 z-50">
       <div className="mx-auto flex h-20 max-w-[1200px] items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a href="/" className="flex items-center gap-3">
+        <Link to="/" className="flex items-center gap-3">
           <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#3B82F6] to-[#1E3A8A] shadow-sm">
             <img src={ImageDiv} alt="Cognixel.AI logo" className="" />
           </div>
           <span className="text-lg font-inter font-bold leading-8 text-[#1E3A8A]">
             Cognixel.AI
           </span>
-        </a>
+        </Link>
 
         <button
           type="button"
@@ -54,24 +55,24 @@ const Navbar = () => {
         <div className="hidden flex-1 justify-center md:flex">
           <ul className="flex items-center space-x-4">
             <li>
-              <a href="#" className="navbar-link">
+              <Link to="/" className="navbar-link">
                 Dashboard
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="navbar-link">
+              <Link to="/exam" className="navbar-link">
                 My Sessions
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="navbar-link">
+              <Link to="/analytics" className="navbar-link">
                 Progress
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="navbar-link">
+              <Link to="/stuck_point" className="navbar-link">
                 Resources
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -101,7 +102,7 @@ const Navbar = () => {
             </svg>
           </button>
 
-          <div className="h-11 w-11 rounded-full border border-slate-300 bg-white" />
+          <FaUserCircle className="h-11 w-11 text-slate-400" />
         </div>
       </div>
 
@@ -110,24 +111,24 @@ const Navbar = () => {
       >
         <ul className="space-y-3">
           <li>
-            <a href="#" className="navbar-link block">
+            <Link to="/" className="navbar-link block">
               Dashboard
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="navbar-link block">
+            <Link to="/exam" className="navbar-link block">
               My Sessions
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="navbar-link block">
+            <Link to="/analytics" className="navbar-link block">
               Progress
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="navbar-link block">
+            <Link to="/stuck_point" className="navbar-link block">
               Resources
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

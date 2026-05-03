@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import NavbarLogin from "../../components/navbarLogin/NavbarLogin";
+import Navbar from "../../components/Navbar/Navbar";
 import StuckPointHeader from "../../components/stuckPointHeader/StuckPointHeader";
 import ConceptSelection from "../../components/conceptSelection/ConceptSelection";
 import PrerequisiteDetection from "../../components/prerequisiteDetection/PrerequisiteDetection";
@@ -27,7 +27,7 @@ const mockBackendData = {
           difficulty: "Easy Difficulty",
           difficultyColor: "bg-green-100 text-green-700",
           tag: "Core Concept",
-          tagColor: "bg-blue-100 text-blue-700"
+          tagColor: "bg-blue-100 text-blue-700",
         },
         example: {
           title: "5.1.2 Example Application",
@@ -36,7 +36,7 @@ const mockBackendData = {
           difficulty: "Easy Difficulty",
           difficultyColor: "bg-green-100 text-green-700",
           tag: "Practice Problem",
-          tagColor: "bg-purple-100 text-purple-700"
+          tagColor: "bg-purple-100 text-purple-700",
         },
         mistakes: {
           title: "5.1.3 Common Mistakes",
@@ -44,9 +44,9 @@ const mockBackendData = {
           difficulty: "Easy Difficulty",
           difficultyColor: "bg-green-100 text-green-700",
           tag: "Common Pitfall",
-          tagColor: "bg-orange-100 text-orange-700"
-        }
-      }
+          tagColor: "bg-orange-100 text-orange-700",
+        },
+      },
     },
     {
       id: "5.2",
@@ -62,7 +62,7 @@ const mockBackendData = {
           difficulty: "Medium Difficulty",
           difficultyColor: "bg-yellow-100 text-yellow-700",
           tag: "Core Concept",
-          tagColor: "bg-blue-100 text-blue-700"
+          tagColor: "bg-blue-100 text-blue-700",
         },
         example: {
           title: "5.2.2 Example Application",
@@ -71,7 +71,7 @@ const mockBackendData = {
           difficulty: "Hard Difficulty",
           difficultyColor: "bg-red-100 text-red-700",
           tag: "Practice Problem",
-          tagColor: "bg-purple-100 text-purple-700"
+          tagColor: "bg-purple-100 text-purple-700",
         },
         mistakes: {
           title: "5.2.3 Common Mistakes",
@@ -79,9 +79,9 @@ const mockBackendData = {
           difficulty: "Easy Difficulty",
           difficultyColor: "bg-green-100 text-green-700",
           tag: "Common Pitfall",
-          tagColor: "bg-orange-100 text-orange-700"
-        }
-      }
+          tagColor: "bg-orange-100 text-orange-700",
+        },
+      },
     },
     {
       id: "5.3",
@@ -97,7 +97,7 @@ const mockBackendData = {
           difficulty: "Medium Difficulty",
           difficultyColor: "bg-yellow-100 text-yellow-700",
           tag: "Core Concept",
-          tagColor: "bg-blue-100 text-blue-700"
+          tagColor: "bg-blue-100 text-blue-700",
         },
         example: {
           title: "5.3.2 Example Application",
@@ -106,7 +106,7 @@ const mockBackendData = {
           difficulty: "Medium Difficulty",
           difficultyColor: "bg-yellow-100 text-yellow-700",
           tag: "Practice Problem",
-          tagColor: "bg-purple-100 text-purple-700"
+          tagColor: "bg-purple-100 text-purple-700",
         },
         mistakes: {
           title: "5.3.3 Common Mistakes",
@@ -114,9 +114,9 @@ const mockBackendData = {
           difficulty: "Medium Difficulty",
           difficultyColor: "bg-yellow-100 text-yellow-700",
           tag: "Common Pitfall",
-          tagColor: "bg-orange-100 text-orange-700"
-        }
-      }
+          tagColor: "bg-orange-100 text-orange-700",
+        },
+      },
     },
     {
       id: "5.4",
@@ -132,7 +132,7 @@ const mockBackendData = {
           difficulty: "Hard Difficulty",
           difficultyColor: "bg-red-100 text-red-700",
           tag: "Core Concept",
-          tagColor: "bg-blue-100 text-blue-700"
+          tagColor: "bg-blue-100 text-blue-700",
         },
         example: {
           title: "5.4.2 Example Application",
@@ -141,7 +141,7 @@ const mockBackendData = {
           difficulty: "Hard Difficulty",
           difficultyColor: "bg-red-100 text-red-700",
           tag: "Practice Problem",
-          tagColor: "bg-purple-100 text-purple-700"
+          tagColor: "bg-purple-100 text-purple-700",
         },
         mistakes: {
           title: "5.4.3 Common Mistakes",
@@ -149,26 +149,56 @@ const mockBackendData = {
           difficulty: "Hard Difficulty",
           difficultyColor: "bg-red-100 text-red-700",
           tag: "Common Pitfall",
-          tagColor: "bg-orange-100 text-orange-700"
-        }
-      }
-    }
+          tagColor: "bg-orange-100 text-orange-700",
+        },
+      },
+    },
   ],
   prerequisites: [
     { id: 1, title: "Basic Derivatives", mastery: 95 },
     { id: 2, title: "Function Composition", mastery: 88 },
     { id: 3, title: "Trigonometric Functions", mastery: 72 },
-    { id: 4, title: "Polynomial Derivatives", mastery: 45 }
+    { id: 4, title: "Polynomial Derivatives", mastery: 45 },
   ],
   knowledgeGaps: [
-    { id: 1, title: "Critical Gap", priority: "High Priority", priorityLevel: "high", description: "You're missing foundational understanding of derivative notation (dy/dx vs f'(x))", actionText: "Fill This Gap First" },
-    { id: 2, title: "Minor Gap", priority: "Medium Priority", priorityLevel: "medium", description: "Practice needed with composite function identification", actionText: "Practice Now" }
+    {
+      id: 1,
+      title: "Critical Gap",
+      priority: "High Priority",
+      priorityLevel: "high",
+      description:
+        "You're missing foundational understanding of derivative notation (dy/dx vs f'(x))",
+      actionText: "Fill This Gap First",
+    },
+    {
+      id: 2,
+      title: "Minor Gap",
+      priority: "Medium Priority",
+      priorityLevel: "medium",
+      description: "Practice needed with composite function identification",
+      actionText: "Practice Now",
+    },
   ],
   aiRecommendations: [
-    { id: 1, title: "Best Starting Point", description: "Begin with Section 5.2.1 - matches your current level", type: "star" },
-    { id: 2, title: "Suggested Path", description: "5.2.1 → Review Polynomials → 5.2.2 → Practice", type: "path" },
-    { id: 3, title: "Estimated Time", description: "45 minutes to master this section", type: "time" }
-  ]
+    {
+      id: 1,
+      title: "Best Starting Point",
+      description: "Begin with Section 5.2.1 - matches your current level",
+      type: "star",
+    },
+    {
+      id: 2,
+      title: "Suggested Path",
+      description: "5.2.1 → Review Polynomials → 5.2.2 → Practice",
+      type: "path",
+    },
+    {
+      id: 3,
+      title: "Estimated Time",
+      description: "45 minutes to master this section",
+      type: "time",
+    },
+  ],
 };
 
 const StuckPoint = () => {
@@ -190,7 +220,7 @@ const StuckPoint = () => {
 
   return (
     <div className="bg-gradient-to-b from-[#FFFFFF] to-[#DBEAFE4D] min-h-[100vh] pb-12">
-      <NavbarLogin />
+      <Navbar />
       <div className="container mx-auto max-w-5xl px-4 py-8 flex flex-col gap-6">
         <StuckPointHeader />
         <ConceptSelection data={data} />

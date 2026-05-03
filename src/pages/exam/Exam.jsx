@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import NavbarLogin from "./../../components/navbarLogin/NavbarLogin";
+import Navbar from "./../../components/Navbar/Navbar";
 import ExamHeader from "../../components/examHeader/ExamHeader";
 import ExamMain from "../../components/examMain/ExamMain";
 
@@ -158,7 +158,7 @@ const Exam = () => {
 
   return (
     <div className=" bg-gradient-to-b from-[#FFFFFF] to-[#DBEAFE4D] min-h-[100vh]">
-      <NavbarLogin />
+      <Navbar />
       <div className="container mx-auto">
         <ExamHeader onTimeUp={handleFinishExam} />
         <ExamMain

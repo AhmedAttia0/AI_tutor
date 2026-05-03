@@ -17,6 +17,7 @@ import {
 } from "react-icons/fa";
 import { FiCalendar, FiBookOpen, FiTrendingUp } from "react-icons/fi";
 import { IoIosCalculator } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const DashboardGrid = () => {
   const iconBgColor = "rgba(59, 130, 246, 1)";
@@ -238,12 +239,12 @@ const DashboardGrid = () => {
                 <h3 className="text-lg font-bold text-slate-900">
                   Recent Sessions
                 </h3>
-                <a
-                  href="#"
+                <Link
+                  to="/exam"
                   className="text-sm font-semibold text-blue-600 hover:text-blue-700"
                 >
                   View All →
-                </a>
+                </Link>
               </div>
 
               <div className="space-y-4">
