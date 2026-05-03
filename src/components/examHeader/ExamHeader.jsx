@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { FaArrowLeft, FaClock } from "react-icons/fa6";
 import { FaPause, FaPlay } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
+
 const ExamHeader = ({ onTimeUp }) => {
+  const navigate = useNavigate();
   const formatTime = (time) => {
     const minutes = Math.floor(time / 60);
     const seconds = time % 60;
@@ -53,7 +56,10 @@ const ExamHeader = ({ onTimeUp }) => {
     <div className="mainHeader flex flex-row justify-between">
       <div className="leftside flex flex-col gap-1 items-start ">
         <div className="flex flex-row items-center gap-2">
-          <div className="text-[#4B5563] w-[1.094rem] h-[0.938rem] cursor-pointer">
+          <div 
+            onClick={() => navigate(-1)}
+            className="text-[#4B5563] w-[1.094rem] h-[0.938rem] cursor-pointer"
+          >
             <FaArrowLeft />
           </div>
           <h2 className="font-bold text-[#1E3A8A] text-3xl">

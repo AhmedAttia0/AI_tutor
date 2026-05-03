@@ -110,7 +110,6 @@ const Exam = () => {
   const handleFinishExam = () => {
     setShowResultModal(true);
 
-    // مهم
     localStorage.removeItem("examEndTime");
   };
   const handleSubmit = () => {

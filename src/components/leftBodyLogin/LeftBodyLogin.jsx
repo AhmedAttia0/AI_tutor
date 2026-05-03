@@ -65,9 +65,9 @@ const LeftBodyLogin = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-row items-center  ">
+          <div className="flex flex-row items-center mt-2">
             <GoDotFill className="text-[#22C55E]" />
-            <p className="font-normal text-[#DBEAFE] text-sm">
+            <p className="font-normal text-[#DBEAFE] text-sm ">
               Online & Ready to Help 24/7
             </p>
           </div>
